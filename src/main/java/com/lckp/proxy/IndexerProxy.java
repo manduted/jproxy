@@ -12,6 +12,8 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.alibaba.fastjson.JSONObject;
+import com.lckp.util.TmdbUtil;
 import org.dom4j.DocumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +37,9 @@ import com.lckp.util.FormatUtil;
 public class IndexerProxy {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(IndexerProxy.class);
-	
+	public static String searchName = null;
+	public static JSONObject tmdbJSONDATA = new JSONObject();
+	public static Boolean hstmdbData = false;
 	/**
 	 * 
 	 * @param proxyConfig
@@ -49,6 +53,8 @@ public class IndexerProxy {
 		proxyParam = getRequestParam(proxyParam, request);
 		LOGGER.info("url: {}{}", proxyParam.getProxyUrl(), proxyParam.getProxyPath());
 		LOGGER.info("searchKey: {}", proxyParam.getSearchKey());
+
+		searchName = proxyParam.getSearchKey();
 		LOGGER.info("paramString: {}", proxyParam.getParamString().replaceAll("apikey=[a-zA-Z0-9]+&", "apikey=******&"));
 		proxy(proxyParam, response);
 		
@@ -74,8 +80,12 @@ public class IndexerProxy {
 	 * @throws DocumentException 
 	 * @description: 处理请求结果并返回
 	 */
-	public void afterProxy(String resultXml, HttpServletResponse response) throws IOException, DocumentException {
-		resultXml = FormatUtil.result(resultXml, JProxyConfiguration.resultRuleList);
+	public void afterProxy(String resultXml, HttpServletResponse response) throws Exception {
+		if (TmdbUtil.tmdbSTATUS() && !hstmdbData){
+			tmdbJSONDATA = new JSONObject(TmdbUtil.tmdbName(searchName));
+			hstmdbData = true;
+		};
+		resultXml = FormatUtil.result(resultXml, JProxyConfiguration.resultRuleList,tmdbJSONDATA);
 		response.getOutputStream().write(resultXml.getBytes());
 	}
 	

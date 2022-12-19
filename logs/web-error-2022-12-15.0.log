@@ -1,0 +1,1 @@
+2022-12-15 00:15:32.684 [http-nio-8117-exec-5] ERROR com.lckp.util.TmdbUtil - 请求异常：Server returned HTTP response code: 502 for URL: http://api.themoviedb.org/3/search/tv?api_key=7e2ecc31e826e5d27bda2b9771444a14&language=zh-CN&page=1&query=Youkoso+Jitsuryoku+Shijou+Shugi+no+Kyoushitsu+e&include_adult=false

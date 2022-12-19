@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,17 @@ import org.springframework.context.annotation.Configuration;
 import com.alibaba.fastjson.JSON;
 import com.lckp.constant.ProxyType;
 import com.lckp.constant.RegularType;
+import com.lckp.constant.TmdbType;
 import com.lckp.model.ProxyConfig;
+import com.lckp.model.TMDBKeyConfig;
 import com.lckp.model.RuleConfig;
 import com.lckp.param.ProxyConfigQueryParam;
+import com.lckp.param.TMDBApiKeyQueryParam;
 import com.lckp.service.facade.IProxyConfigService;
 import com.lckp.service.facade.IRuleConfigService;
+import com.lckp.service.facade.ITMDBConfigService;
+
+import static jdk.nashorn.internal.objects.Global.println;
 
 /**
  * @className: JProxyConfiguration
@@ -36,11 +43,14 @@ public class JProxyConfiguration {
 	private IProxyConfigService proxyConfigService;
 	@Autowired
 	private IRuleConfigService ruleConfigService;
-	
+	@Autowired
+	private ITMDBConfigService tmdbConfigService;
+
 	// 代理配置
 	public static ProxyConfig jackett;
 	public static ProxyConfig prowlarr;
 	public static ProxyConfig qBittorrent;
+	public static TMDBKeyConfig keyconfig;
 	
 	// 规则列表
 	public static List<RuleConfig> searchRuleList;
@@ -71,6 +81,7 @@ public class JProxyConfiguration {
 				
 				// 初始化规则配置
 				initRuleConfig();
+
 			}
 		}).start();
 	}
@@ -90,11 +101,18 @@ public class JProxyConfiguration {
 		
 		param.setProxyType(ProxyType.qBittorrent.toString());
 		qBittorrent = proxyConfigService.query(param);
-		
+
+		//TMDB数据读取 @author manduted
+		TMDBApiKeyQueryParam tmdbparam = new TMDBApiKeyQueryParam();
+		tmdbparam.setTmdbTYPE(TmdbType.TMDB.toString());
+		keyconfig = tmdbConfigService.query(tmdbparam);
+
 		LOGGER.info("加载代理配置成功");
 		LOGGER.info("Jackett: {}", JSON.toJSONString(jackett));
 		LOGGER.info("Prowlarr: {}", JSON.toJSONString(prowlarr));
 		LOGGER.info("qBittorrent: {}", JSON.toJSONString(qBittorrent));
+
+		LOGGER.info("TMDBConfig: {}", JSON.toJSONString(keyconfig));
 	}
     
 	
@@ -119,7 +137,7 @@ public class JProxyConfiguration {
 	 */
 	public static boolean isInit() {
 		int count = 0;
-		while (count < 3 && (jackett == null || prowlarr == null || qBittorrent == null || searchRuleList == null || resultRuleList == null)) {
+		while (count < 3 && (jackett == null || prowlarr == null || qBittorrent == null || searchRuleList == null || keyconfig == null ||resultRuleList == null)) {
 			LOGGER.info("等待数据初始化...");
 			try {
 				Thread.sleep(2000);
@@ -129,7 +147,7 @@ public class JProxyConfiguration {
 			count++;
 		}
 		
-		if (jackett == null || prowlarr == null || qBittorrent == null || searchRuleList == null || resultRuleList == null) {
+		if (jackett == null || prowlarr == null || qBittorrent == null || searchRuleList == null || keyconfig == null || resultRuleList == null) {
 			return false;
 		}
 		

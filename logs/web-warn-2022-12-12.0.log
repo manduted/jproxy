@@ -1,0 +1,1 @@
+2022-12-12 11:19:34.571 [Thread-10] WARN  o.a.i.session.AutoMappingUnknownColumnBehavior - Unknown column is detected on 'com.lckp.mapper.ITMDBConfigMapper.query' auto-mapping. Mapping parameters are [columnName=TMDB_ID,propertyName=TMDB_ID,propertyType=null]

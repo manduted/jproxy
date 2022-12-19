@@ -1,0 +1,460 @@
+2022-10-04 13:38:05.765 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2022-10-04 13:38:05.813 [restartedMain] INFO  com.lckp.Application - Starting Application on Li-PC with PID 15208 (G:\Github\jproxy\target\classes started by mandu in G:\Github\jproxy)
+2022-10-04 13:38:05.818 [restartedMain] INFO  com.lckp.Application - The following profiles are active: dev
+2022-10-04 13:38:05.867 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-04 13:38:05.867 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-04 13:38:07.313 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8117 (http)
+2022-10-04 13:38:07.322 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8117"]
+2022-10-04 13:38:07.322 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-10-04 13:38:07.323 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-04 13:38:07.423 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-10-04 13:38:07.424 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1557 ms
+2022-10-04 13:38:07.429 [restartedMain] INFO  c.lckp.config.QBittorrentProxyServletConfiguration - IS DEBUG ENABLED: true
+2022-10-04 13:38:08.437 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 13:38:08.470 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-10-04 13:38:08.493 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-10-04 13:38:08.580 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-10-04 13:38:08.675 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-10-04 13:38:09.679 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-10-04 13:38:09.689 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-10-04 13:38:09.691 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT LOCKED FROM DATABASECHANGELOGLOCK WHERE ID=1
+2022-10-04 13:38:09.716 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully acquired change log lock
+2022-10-04 13:38:11.033 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.5.0.sql
+2022-10-04 13:38:11.035 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.6.0.sql
+2022-10-04 13:38:11.059 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT MD5SUM FROM DATABASECHANGELOG WHERE MD5SUM IS NOT NULL
+2022-10-04 13:38:11.061 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOG
+2022-10-04 13:38:11.061 [restartedMain] INFO  l.changelog.StandardChangeLogHistoryService - Reading from DATABASECHANGELOG
+2022-10-04 13:38:11.061 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT * FROM DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-10-04 13:38:11.081 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully released change log lock
+2022-10-04 13:38:11.104 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2022-10-04 13:38:11.190 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8117"]
+2022-10-04 13:38:11.210 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8117 (http) with context path ''
+2022-10-04 13:38:11.839 [restartedMain] INFO  com.lckp.Application - Started Application in 6.779 seconds (JVM running for 7.85)
+2022-10-04 13:38:14.090 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - 加载代理配置成功
+2022-10-04 13:38:14.189 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - Jackett: {"createTime":"2022-08-25 13:57:09","proxyId":1,"proxyIp":"192.168.50.200","proxyPath":"/jackett/**","proxyPort":"9117","proxyType":"Jackett","updateTime":"2022-10-03 06:28:41","validstatus":1}
+2022-10-04 13:38:14.189 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - Prowlarr: {"createTime":"2022-08-25 13:57:09","proxyId":2,"proxyIp":"127.0.0.1","proxyPath":"/prowlarr/**","proxyPort":"9696","proxyType":"Prowlarr","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-10-04 13:38:14.189 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - qBittorrent: {"createTime":"2022-08-25 13:57:09","proxyId":3,"proxyIp":"127.0.0.1","proxyPath":"/qbittorrent/**","proxyPort":"8080","proxyType":"qBittorrent","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-10-04 13:38:14.192 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - TMDBConfig: {"tmdbAPIKEY":"","tmdbCHINESE":"","tmdbID":1,"tmdbSTATUS":"","tmdbTYPE":"TMDB"}
+2022-10-04 13:38:14.206 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 13:38:51.408 [http-nio-8117-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 13:38:51.409 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-10-04 13:38:51.414 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-10-04 13:38:51.430 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:38:51.430 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
+2022-10-04 13:38:51.431 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=movie&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1
+2022-10-04 13:38:57.972 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:38:57.972 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
+2022-10-04 13:38:57.972 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=movie&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1
+2022-10-04 13:39:16.003 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:39:16.003 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - searchKey: New Police Story 2004
+2022-10-04 13:39:16.004 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=search&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1&q=New Police Story 2004
+2022-10-04 13:39:17.998 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:39:17.998 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - searchKey: 新警察故事 2004
+2022-10-04 13:39:17.998 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=search&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1&q=新警察故事 2004
+2022-10-04 13:43:30.978 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:43:30.978 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
+2022-10-04 13:43:30.978 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=caps&apikey=bmb3my5m6x0hf6eea0yhb6t8adeiwchg
+2022-10-04 13:43:30.991 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:43:30.991 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
+2022-10-04 13:43:30.991 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1
+2022-10-04 13:43:40.293 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:43:40.293 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - searchKey: Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e
+2022-10-04 13:43:40.294 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1&q=Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e
+2022-10-04 13:43:42.280 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:43:42.280 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - searchKey: Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e S2
+2022-10-04 13:43:42.281 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1&q=Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e S2
+2022-10-04 13:45:32.475 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:45:32.475 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
+2022-10-04 13:45:32.475 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1
+2022-10-04 13:45:46.553 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:45:46.553 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - searchKey: Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e
+2022-10-04 13:45:46.555 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1&q=Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e
+2022-10-04 13:45:48.496 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:45:48.496 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - searchKey: Classroom of the Elite
+2022-10-04 13:45:48.496 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1&q=Classroom of the Elite
+2022-10-04 13:45:59.191 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:45:59.191 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - searchKey: Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e S2
+2022-10-04 13:45:59.191 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1&q=Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e S2
+2022-10-04 13:46:01.184 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:46:01.184 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - searchKey: Classroom of the Elite 2nd Season
+2022-10-04 13:46:01.185 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1&q=Classroom of the Elite 2nd Season
+2022-10-04 13:46:31.735 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:46:31.735 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - searchKey: Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e S2
+2022-10-04 13:46:31.735 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1&q=Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e S2
+2022-10-04 13:46:33.718 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 13:46:33.718 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - searchKey: Classroom of the Elite 2nd Season
+2022-10-04 13:46:33.718 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1&q=Classroom of the Elite 2nd Season
+2022-10-04 13:48:47.074 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2022-10-04 13:48:47.077 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 13:48:47.081 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-10-04 13:48:47.088 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-10-04 19:37:50.607 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2022-10-04 19:37:50.637 [restartedMain] INFO  com.lckp.Application - Starting Application on Li-PC with PID 14952 (G:\Github\jproxy\target\classes started by mandu in G:\Github\jproxy)
+2022-10-04 19:37:50.638 [restartedMain] INFO  com.lckp.Application - The following profiles are active: dev
+2022-10-04 19:37:50.679 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-04 19:37:50.679 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-04 19:37:52.094 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8117 (http)
+2022-10-04 19:37:52.104 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8117"]
+2022-10-04 19:37:52.105 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-10-04 19:37:52.105 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-04 19:37:52.202 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-10-04 19:37:52.202 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1523 ms
+2022-10-04 19:37:52.209 [restartedMain] INFO  c.lckp.config.QBittorrentProxyServletConfiguration - IS DEBUG ENABLED: true
+2022-10-04 19:37:53.275 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 19:37:53.310 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-10-04 19:37:53.337 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-10-04 19:37:53.425 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-10-04 19:37:53.522 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-10-04 19:37:54.419 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-10-04 19:37:54.426 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-10-04 19:37:54.427 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT LOCKED FROM DATABASECHANGELOGLOCK WHERE ID=1
+2022-10-04 19:37:54.446 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully acquired change log lock
+2022-10-04 19:37:55.716 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.5.0.sql
+2022-10-04 19:37:55.719 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.6.0.sql
+2022-10-04 19:37:55.748 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT MD5SUM FROM DATABASECHANGELOG WHERE MD5SUM IS NOT NULL
+2022-10-04 19:37:55.750 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOG
+2022-10-04 19:37:55.750 [restartedMain] INFO  l.changelog.StandardChangeLogHistoryService - Reading from DATABASECHANGELOG
+2022-10-04 19:37:55.750 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT * FROM DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-10-04 19:37:55.765 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully released change log lock
+2022-10-04 19:37:55.802 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2022-10-04 19:37:55.898 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8117"]
+2022-10-04 19:37:55.916 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8117 (http) with context path ''
+2022-10-04 19:37:56.334 [restartedMain] INFO  com.lckp.Application - Started Application in 6.353 seconds (JVM running for 7.528)
+2022-10-04 19:37:59.106 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - 加载代理配置成功
+2022-10-04 19:37:59.200 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - Jackett: {"createTime":"2022-08-25 13:57:09","proxyId":1,"proxyIp":"192.168.50.200","proxyPath":"/jackett/**","proxyPort":"9117","proxyType":"Jackett","updateTime":"2022-10-03 06:28:41","validstatus":1}
+2022-10-04 19:37:59.201 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - Prowlarr: {"createTime":"2022-08-25 13:57:09","proxyId":2,"proxyIp":"127.0.0.1","proxyPath":"/prowlarr/**","proxyPort":"9696","proxyType":"Prowlarr","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-10-04 19:37:59.201 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - qBittorrent: {"createTime":"2022-08-25 13:57:09","proxyId":3,"proxyIp":"127.0.0.1","proxyPath":"/qbittorrent/**","proxyPort":"8080","proxyType":"qBittorrent","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-10-04 19:37:59.205 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - TMDBConfig: {"tmdbAPIKEY":"","tmdbCHINESE":"","tmdbID":1,"tmdbSTATUS":"","tmdbTYPE":"TMDB"}
+2022-10-04 19:37:59.223 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 19:38:02.064 [http-nio-8117-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 19:38:02.065 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-10-04 19:38:02.072 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2022-10-04 19:38:07.976 [http-nio-8117-exec-5] INFO  com.lckp.controller.PageController - noticeLocation: classpath:json/notice.json
+2022-10-04 19:38:10.001 [http-nio-8117-exec-7] INFO  com.lckp.controller.tmdbConfigController - TMDB - 查询：{"tmdbTYPE":"TMDB"}
+2022-10-04 19:38:29.692 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2022-10-04 19:38:29.693 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 19:38:29.695 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-10-04 19:38:29.698 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-10-04 19:39:46.877 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2022-10-04 19:39:46.884 [restartedMain] INFO  com.lckp.Application - Starting Application on Li-PC with PID 20020 (G:\Github\jproxy\target\classes started by mandu in G:\Github\jproxy)
+2022-10-04 19:39:46.886 [restartedMain] INFO  com.lckp.Application - The following profiles are active: dev
+2022-10-04 19:39:46.928 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-04 19:39:46.929 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-04 19:39:48.170 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8117 (http)
+2022-10-04 19:39:48.178 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8117"]
+2022-10-04 19:39:48.178 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-10-04 19:39:48.179 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-04 19:39:48.266 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-10-04 19:39:48.267 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1338 ms
+2022-10-04 19:39:48.271 [restartedMain] INFO  c.lckp.config.QBittorrentProxyServletConfiguration - IS DEBUG ENABLED: true
+2022-10-04 19:39:49.202 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 19:39:49.230 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-10-04 19:39:49.251 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-10-04 19:39:49.322 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-10-04 19:39:49.419 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-10-04 19:39:50.257 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-10-04 19:39:50.261 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-10-04 19:39:50.262 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT LOCKED FROM DATABASECHANGELOGLOCK WHERE ID=1
+2022-10-04 19:39:50.278 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully acquired change log lock
+2022-10-04 19:39:51.407 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.5.0.sql
+2022-10-04 19:39:51.409 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.6.0.sql
+2022-10-04 19:39:51.434 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT MD5SUM FROM DATABASECHANGELOG WHERE MD5SUM IS NOT NULL
+2022-10-04 19:39:51.435 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOG
+2022-10-04 19:39:51.435 [restartedMain] INFO  l.changelog.StandardChangeLogHistoryService - Reading from DATABASECHANGELOG
+2022-10-04 19:39:51.435 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT * FROM DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-10-04 19:39:51.448 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully released change log lock
+2022-10-04 19:39:51.479 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2022-10-04 19:39:51.556 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8117"]
+2022-10-04 19:39:51.574 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8117 (http) with context path ''
+2022-10-04 19:39:52.088 [restartedMain] INFO  com.lckp.Application - Started Application in 5.819 seconds (JVM running for 6.675)
+2022-10-04 19:39:54.914 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - 加载代理配置成功
+2022-10-04 19:39:55.001 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - Jackett: {"createTime":"2022-08-25 13:57:09","proxyId":1,"proxyIp":"192.168.50.200","proxyPath":"/jackett/**","proxyPort":"9117","proxyType":"Jackett","updateTime":"2022-10-03 06:28:41","validstatus":1}
+2022-10-04 19:39:55.001 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - Prowlarr: {"createTime":"2022-08-25 13:57:09","proxyId":2,"proxyIp":"127.0.0.1","proxyPath":"/prowlarr/**","proxyPort":"9696","proxyType":"Prowlarr","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-10-04 19:39:55.001 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - qBittorrent: {"createTime":"2022-08-25 13:57:09","proxyId":3,"proxyIp":"127.0.0.1","proxyPath":"/qbittorrent/**","proxyPort":"8080","proxyType":"qBittorrent","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-10-04 19:39:55.005 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - TMDBConfig: {"tmdbAPIKEY":"","tmdbCHINESE":"","tmdbID":1,"tmdbSTATUS":"","tmdbTYPE":"TMDB"}
+2022-10-04 19:39:55.014 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 19:40:23.029 [http-nio-8117-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 19:40:23.029 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-10-04 19:40:23.035 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2022-10-04 19:40:25.206 [http-nio-8117-exec-4] INFO  com.lckp.controller.PageController - noticeLocation: classpath:json/notice.json
+2022-10-04 19:40:26.682 [http-nio-8117-exec-5] INFO  com.lckp.controller.tmdbConfigController - TMDB - 查询：{"tmdbTYPE":"TMDB"}
+2022-10-04 19:41:51.190 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2022-10-04 19:41:51.191 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 19:41:51.193 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-10-04 19:41:51.196 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-10-04 19:41:55.681 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2022-10-04 19:41:55.715 [restartedMain] INFO  com.lckp.Application - Starting Application on Li-PC with PID 2924 (G:\Github\jproxy\target\classes started by mandu in G:\Github\jproxy)
+2022-10-04 19:41:55.717 [restartedMain] INFO  com.lckp.Application - The following profiles are active: dev
+2022-10-04 19:41:55.769 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-04 19:41:55.770 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-04 19:41:57.270 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8117 (http)
+2022-10-04 19:41:57.287 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8117"]
+2022-10-04 19:41:57.288 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-10-04 19:41:57.289 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-04 19:41:57.455 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-10-04 19:41:57.455 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1685 ms
+2022-10-04 19:41:57.459 [restartedMain] INFO  c.lckp.config.QBittorrentProxyServletConfiguration - IS DEBUG ENABLED: true
+2022-10-04 19:41:58.481 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 19:41:58.511 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-10-04 19:41:58.533 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-10-04 19:41:58.624 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-10-04 19:41:58.720 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-10-04 19:41:59.548 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-10-04 19:41:59.553 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-10-04 19:41:59.555 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT LOCKED FROM DATABASECHANGELOGLOCK WHERE ID=1
+2022-10-04 19:41:59.567 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully acquired change log lock
+2022-10-04 19:42:00.748 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.5.0.sql
+2022-10-04 19:42:00.752 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.6.0.sql
+2022-10-04 19:42:00.777 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT MD5SUM FROM DATABASECHANGELOG WHERE MD5SUM IS NOT NULL
+2022-10-04 19:42:00.778 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOG
+2022-10-04 19:42:00.778 [restartedMain] INFO  l.changelog.StandardChangeLogHistoryService - Reading from DATABASECHANGELOG
+2022-10-04 19:42:00.778 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT * FROM DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-10-04 19:42:00.793 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully released change log lock
+2022-10-04 19:42:00.821 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2022-10-04 19:42:00.897 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8117"]
+2022-10-04 19:42:00.916 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8117 (http) with context path ''
+2022-10-04 19:42:01.538 [restartedMain] INFO  com.lckp.Application - Started Application in 6.377 seconds (JVM running for 7.319)
+2022-10-04 19:42:04.121 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - 加载代理配置成功
+2022-10-04 19:42:04.189 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - Jackett: {"createTime":"2022-08-25 13:57:09","proxyId":1,"proxyIp":"192.168.50.200","proxyPath":"/jackett/**","proxyPort":"9117","proxyType":"Jackett","updateTime":"2022-10-03 06:28:41","validstatus":1}
+2022-10-04 19:42:04.189 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - Prowlarr: {"createTime":"2022-08-25 13:57:09","proxyId":2,"proxyIp":"127.0.0.1","proxyPath":"/prowlarr/**","proxyPort":"9696","proxyType":"Prowlarr","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-10-04 19:42:04.189 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - qBittorrent: {"createTime":"2022-08-25 13:57:09","proxyId":3,"proxyIp":"127.0.0.1","proxyPath":"/qbittorrent/**","proxyPort":"8080","proxyType":"qBittorrent","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-10-04 19:42:04.191 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - TMDBConfig: {"tmdbAPIKEY":"","tmdbCHINESE":"","tmdbID":1,"tmdbSTATUS":"","tmdbTYPE":"TMDB"}
+2022-10-04 19:42:04.199 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 19:42:05.589 [http-nio-8117-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 19:42:05.590 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-10-04 19:42:05.596 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2022-10-04 19:42:06.808 [http-nio-8117-exec-6] INFO  com.lckp.controller.PageController - noticeLocation: classpath:json/notice.json
+2022-10-04 19:42:06.812 [http-nio-8117-exec-2] INFO  com.lckp.controller.tmdbConfigController - TMDB - 查询：{"tmdbTYPE":"TMDB"}
+2022-10-04 20:00:00.008 [scheduling-1] INFO  com.lckp.task.SyncTask - 开始同步规则市场变化
+2022-10-04 20:00:00.777 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:00.832 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:00.869 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:00.937 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.001 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.058 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.126 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.168 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.224 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.295 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.343 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.391 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.451 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.506 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.563 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.648 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.707 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.776 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.830 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.880 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.937 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:01.992 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.040 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.084 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.147 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.186 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.250 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.287 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.317 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.401 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.441 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.508 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.556 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.618 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.675 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.725 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.775 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.823 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.885 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.923 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:02.987 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:03.043 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 20:00:03.044 [scheduling-1] INFO  com.lckp.task.SyncTask - 同步规则市场变化完毕
+2022-10-04 21:00:00.008 [scheduling-1] INFO  com.lckp.task.SyncTask - 开始同步规则市场变化
+2022-10-04 21:00:00.323 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.371 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.433 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.490 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.535 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.570 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.659 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.714 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.763 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.816 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.855 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.914 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.961 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:00.988 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.058 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.080 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.112 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.187 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.232 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.252 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.285 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.383 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.431 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.492 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.533 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.597 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.645 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.702 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.731 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.760 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.789 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.841 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.922 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:01.984 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:02.015 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:02.085 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:02.137 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:02.188 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:02.245 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:02.294 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:02.337 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:02.396 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 21:00:02.397 [scheduling-1] INFO  com.lckp.task.SyncTask - 同步规则市场变化完毕
+2022-10-04 21:52:16.809 [http-nio-8117-exec-9] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 21:52:16.809 [http-nio-8117-exec-9] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
+2022-10-04 21:52:16.810 [http-nio-8117-exec-9] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1
+2022-10-04 22:00:00.005 [scheduling-1] INFO  com.lckp.task.SyncTask - 开始同步规则市场变化
+2022-10-04 22:00:00.335 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.372 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.399 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.425 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.489 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.535 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.575 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.636 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.661 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.692 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.722 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.761 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.799 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.822 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.876 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:00.963 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.027 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.146 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.234 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.314 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.349 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.391 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.474 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.519 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.573 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.621 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.656 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.723 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.777 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.836 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.879 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:01.924 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.009 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.058 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.112 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.173 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.209 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.275 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.327 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.367 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.418 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.450 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 22:00:02.451 [scheduling-1] INFO  com.lckp.task.SyncTask - 同步规则市场变化完毕
+2022-10-04 22:53:54.147 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
+2022-10-04 22:53:54.147 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
+2022-10-04 22:53:54.147 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,8000,8010,2000&limit=100&extended=1
+2022-10-04 23:00:00.009 [scheduling-1] INFO  com.lckp.task.SyncTask - 开始同步规则市场变化
+2022-10-04 23:00:00.300 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.370 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.421 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.455 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.495 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.560 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.599 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.631 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.657 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.714 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.831 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.871 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.921 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:00.973 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.004 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.034 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.088 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.170 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.224 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.254 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.290 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.341 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.430 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.465 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.526 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.576 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.633 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.685 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.744 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.795 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.848 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.902 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:01.942 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:02.010 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:02.051 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:02.105 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:02.128 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:02.175 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:02.257 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:02.312 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:02.343 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:02.391 [scheduling-1] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:00:02.392 [scheduling-1] INFO  com.lckp.task.SyncTask - 同步规则市场变化完毕
+2022-10-04 23:12:25.851 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2022-10-04 23:12:25.852 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 23:12:25.853 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-10-04 23:12:25.858 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-10-04 23:12:29.854 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2022-10-04 23:12:29.887 [restartedMain] INFO  com.lckp.Application - Starting Application on Li-PC with PID 3804 (G:\Github\jproxy\target\classes started by mandu in G:\Github\jproxy)
+2022-10-04 23:12:29.888 [restartedMain] INFO  com.lckp.Application - The following profiles are active: dev
+2022-10-04 23:12:29.933 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-04 23:12:29.933 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-04 23:12:31.192 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8117 (http)
+2022-10-04 23:12:31.199 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8117"]
+2022-10-04 23:12:31.199 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-10-04 23:12:31.200 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-10-04 23:12:31.295 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-10-04 23:12:31.296 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1363 ms
+2022-10-04 23:12:31.300 [restartedMain] INFO  c.lckp.config.QBittorrentProxyServletConfiguration - IS DEBUG ENABLED: true
+2022-10-04 23:12:32.249 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-04 23:12:32.279 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-10-04 23:12:32.299 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-10-04 23:12:32.375 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-10-04 23:12:32.469 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-10-04 23:12:33.286 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-10-04 23:12:33.292 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-10-04 23:12:33.292 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT LOCKED FROM DATABASECHANGELOGLOCK WHERE ID=1
+2022-10-04 23:12:33.304 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully acquired change log lock
+2022-10-04 23:12:34.462 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.5.0.sql
+2022-10-04 23:12:34.464 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.6.0.sql
+2022-10-04 23:12:34.490 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT MD5SUM FROM DATABASECHANGELOG WHERE MD5SUM IS NOT NULL
+2022-10-04 23:12:34.491 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOG
+2022-10-04 23:12:34.491 [restartedMain] INFO  l.changelog.StandardChangeLogHistoryService - Reading from DATABASECHANGELOG
+2022-10-04 23:12:34.492 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT * FROM DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-10-04 23:12:34.505 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully released change log lock
+2022-10-04 23:12:34.530 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2022-10-04 23:12:34.605 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8117"]
+2022-10-04 23:12:34.625 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8117 (http) with context path ''
+2022-10-04 23:12:35.256 [restartedMain] INFO  com.lckp.Application - Started Application in 5.871 seconds (JVM running for 6.791)
+2022-10-04 23:12:37.884 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - 加载代理配置成功
+2022-10-04 23:12:37.946 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - Jackett: {"createTime":"2022-08-25 13:57:09","proxyId":1,"proxyIp":"192.168.50.200","proxyPath":"/jackett/**","proxyPort":"9117","proxyType":"Jackett","updateTime":"2022-10-03 06:28:41","validstatus":1}
+2022-10-04 23:12:37.946 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - Prowlarr: {"createTime":"2022-08-25 13:57:09","proxyId":2,"proxyIp":"127.0.0.1","proxyPath":"/prowlarr/**","proxyPort":"9696","proxyType":"Prowlarr","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-10-04 23:12:37.946 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - qBittorrent: {"createTime":"2022-08-25 13:57:09","proxyId":3,"proxyIp":"127.0.0.1","proxyPath":"/qbittorrent/**","proxyPort":"8080","proxyType":"qBittorrent","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-10-04 23:12:37.951 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - TMDBConfig: {"tmdbAPIKEY":"","tmdbCHINESE":"","tmdbID":1,"tmdbSTATUS":"","tmdbTYPE":"TMDB"}
+2022-10-04 23:12:37.960 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-10-04 23:13:06.881 [http-nio-8117-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-04 23:13:06.881 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-10-04 23:13:06.885 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2022-10-04 23:13:12.592 [http-nio-8117-exec-8] INFO  com.lckp.controller.PageController - noticeLocation: classpath:json/notice.json
+2022-10-04 23:13:14.750 [http-nio-8117-exec-3] INFO  com.lckp.controller.tmdbConfigController - TMDB - 查询：{"tmdbTYPE":"TMDB"}
+2022-10-04 23:14:52.473 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2022-10-04 23:14:52.474 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-04 23:14:52.478 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-10-04 23:14:52.483 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

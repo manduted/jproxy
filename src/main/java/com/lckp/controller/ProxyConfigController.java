@@ -56,10 +56,10 @@ public class ProxyConfigController {
         try {
             socket.connect(new InetSocketAddress(param.getProxyIp(), Integer.parseInt(param.getProxyPort())));
             reachable = true;
-            
+
         } catch (Exception e) {
             LOGGER.error("代理配置 - 测试：{}", e);
-            
+
         } finally {
             try {
                 socket.close();
@@ -67,11 +67,11 @@ public class ProxyConfigController {
             	LOGGER.error("代理配置 - 关闭 Socket：{}", e);
             }
         }
-        
+
         if (reachable) {
     		return ResVo.success(Message.TIPS_REACHABLE, messageSource, locale);
 		}
-        
+
 		return ResVo.fail(Message.TIPS_UNREACHABLE, messageSource, locale);
 	}
 	
@@ -109,7 +109,7 @@ public class ProxyConfigController {
 		
 		return ResVo.fail(Message.MODIFY_FAIL, messageSource, locale);
 	}
-	
+
 	public static boolean isHostConnectable(String host, int port) {
         Socket socket = new Socket();
         try {

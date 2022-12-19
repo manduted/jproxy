@@ -1,7 +1,7 @@
 version: "3"
 services:
   jproxy:
-    image: luckypuppy514/jproxy:latest
+    image: manduted/jproxy:latest
     container_name: jproxy
     environment:
       - TZ=Asia/Shanghai

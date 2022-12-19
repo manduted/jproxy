@@ -1,0 +1,42 @@
+2022-12-12 11:19:26.209 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2022-12-12 11:19:26.254 [restartedMain] INFO  com.lckp.Application - Starting Application on Li-PC with PID 11316 (G:\Github\jproxy\target\classes started by mandu in G:\Github\jproxy)
+2022-12-12 11:19:26.256 [restartedMain] INFO  com.lckp.Application - The following profiles are active: dev
+2022-12-12 11:19:26.321 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-12 11:19:26.321 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-12 11:19:27.757 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8117 (http)
+2022-12-12 11:19:27.765 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8117"]
+2022-12-12 11:19:27.766 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-12-12 11:19:27.766 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-12-12 11:19:27.866 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-12-12 11:19:27.867 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1544 ms
+2022-12-12 11:19:27.871 [restartedMain] INFO  c.lckp.config.QBittorrentProxyServletConfiguration - IS DEBUG ENABLED: true
+2022-12-12 11:19:28.999 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-12-12 11:19:29.035 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-12-12 11:19:29.061 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-12-12 11:19:29.149 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-12-12 11:19:29.221 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-12-12 11:19:30.069 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-12-12 11:19:30.075 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2022-12-12 11:19:30.077 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT LOCKED FROM DATABASECHANGELOGLOCK WHERE ID=1
+2022-12-12 11:19:30.091 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully acquired change log lock
+2022-12-12 11:19:31.277 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.5.0.sql
+2022-12-12 11:19:31.279 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.6.0.sql
+2022-12-12 11:19:31.305 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT MD5SUM FROM DATABASECHANGELOG WHERE MD5SUM IS NOT NULL
+2022-12-12 11:19:31.306 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOG
+2022-12-12 11:19:31.306 [restartedMain] INFO  l.changelog.StandardChangeLogHistoryService - Reading from DATABASECHANGELOG
+2022-12-12 11:19:31.306 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT * FROM DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2022-12-12 11:19:31.321 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully released change log lock
+2022-12-12 11:19:31.354 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2022-12-12 11:19:31.449 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8117"]
+2022-12-12 11:19:31.470 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8117 (http) with context path ''
+2022-12-12 11:19:32.017 [restartedMain] INFO  com.lckp.Application - Started Application in 6.617 seconds (JVM running for 7.748)
+2022-12-12 11:19:34.573 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - 加载代理配置成功
+2022-12-12 11:19:34.606 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - Jackett: {"createTime":"2022-08-25 13:57:09","proxyId":1,"proxyIp":"127.0.0.1","proxyPath":"/jackett/**","proxyPort":"9117","proxyType":"Jackett","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-12-12 11:19:34.606 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - Prowlarr: {"createTime":"2022-08-25 13:57:09","proxyId":2,"proxyIp":"127.0.0.1","proxyPath":"/prowlarr/**","proxyPort":"9696","proxyType":"Prowlarr","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-12-12 11:19:34.606 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - qBittorrent: {"createTime":"2022-08-25 13:57:09","proxyId":3,"proxyIp":"127.0.0.1","proxyPath":"/qbittorrent/**","proxyPort":"8080","proxyType":"qBittorrent","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2022-12-12 11:19:34.609 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - TMDBConfig: {"tmdbAPIKEY":"","tmdbCHINESE":"","tmdbSTATUS":"","tmdbTYPE":"TMDB"}
+2022-12-12 11:19:34.618 [Thread-10] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：3，结果：39
+2022-12-12 11:19:38.137 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2022-12-12 11:19:38.138 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-12-12 11:19:38.143 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-12-12 11:19:38.148 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lckp.mapper.ITMDBConfigMapper">
+    <select id="query" parameterType="com.lckp.param.TMDBApiKeyQueryParam" resultType="com.lckp.model.TMDBKeyConfig">
+        SELECT TMDB_ID, TMDB_TYPE, TMDB_APIKEY, TMDB_STATUS, TMDB_CHINESE, TMDB_PROXY_STATUS, TMDB_PROXY_IP, TMDB_PROXY_PORT
+        FROM API_KEY
+        WHERE TMDB_TYPE = #{tmdbTYPE}
+    </select>
+
+    <update id="modify" parameterType="com.lckp.param.TMDBApiKeyModifyParam">
+        UPDATE API_KEY
+        SET TMDB_APIKEY = #{tmdbAPIKEY},
+            TMDB_STATUS = #{tmdbSTATUS},
+            TMDB_CHINESE = #{tmdbCHINESE},
+            TMDB_PROXY_STATUS = #{tmdbPROXYSTATUS},
+            TMDB_PROXY_IP = #{tmdbPROXYIP},
+            TMDB_PROXY_PORT = #{tmdbPROXYPORT}
+        WHERE TMDB_TYPE = #{tmdbTYPE}
+    </update>
+
+</mapper>

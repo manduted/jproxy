@@ -5,4 +5,4 @@ docker run --name jproxy \
 -e "JAVA_OPTS=-Xms256m -Xmx256m" \
 --net=host \
 --restart unless-stopped \
--d luckypuppy514/jproxy:latest
+-d manduted/jproxy:latest

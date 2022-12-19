@@ -73,15 +73,26 @@ public class PageController {
 	
 	@GetMapping("/{proxyType}-config")
 	public String proxyConfig(@PathVariable(value="proxyType") String proxyType, Model model, Locale locale) {
-		model.addAttribute("PROXY_CONFIG_TITLE", proxyType);
-		model.addAttribute("PROXY_TYPE", proxyType);
-		if ("en_US".equals(locale.toString())) {
-			model.addAttribute("TIPS_HREF", "https://github.com/LuckyPuppy514/jproxy/blob/main/README.md#4-sonarr-setting");
-		} else {
-			model.addAttribute("TIPS_HREF", "https://github.com/LuckyPuppy514/jproxy/blob/main/README.zh_CN.md#4-sonarr-%E9%85%8D%E7%BD%AE");
+		if(!"tmdb".equals(proxyType)){
+			model.addAttribute("PROXY_CONFIG_TITLE", proxyType);
+			model.addAttribute("PROXY_TYPE", proxyType);
+			model.addAttribute("TIPS_HREF",tips(locale));
+			return "page/proxy-config";
 		}
-		
-		return "page/proxy-config";
+		else{
+			model.addAttribute("PROXY_CONFIG_TITLE", "TMDB");
+            model.addAttribute("PROXY_TYPE", "TMDB");
+			model.addAttribute("TIPS_HREF",tips(locale));
+            return "page/tmdb-config";
+		}
+	}
+
+	private String  tips(Locale locale) {
+		if ("en_US".equals(locale.toString())) {
+			return "https://github.com/LuckyPuppy514/jproxy/blob/main/README.md#4-sonarr-setting";
+		} else {
+			return "https://github.com/LuckyPuppy514/jproxy/blob/main/README.zh_CN.md#4-sonarr-%E9%85%8D%E7%BD%AE";
+		}
 	}
 	
 	@GetMapping("/{pageName}")
@@ -115,11 +126,15 @@ public class PageController {
 			menuInfoJson.put(Menu.TITLE, title);
 			
 			JSONArray childs = menuInfoJson.getJSONArray(Menu.CHILD);
-			for (Object childObject : childs) {
-				JSONObject childJson = (JSONObject) childObject;
-				title = childJson.getString(Menu.TITLE);
-				title = messageSource.getMessage(title, null, locale);
-				childJson.put(Menu.TITLE, title);
+			//添加判断，可增加单独父菜单@manduted
+			if (childs != null && childs.size() > 0)
+			{
+				for (Object childObject : childs) {
+					JSONObject childJson = (JSONObject) childObject;
+					title = childJson.getString(Menu.TITLE);
+					title = messageSource.getMessage(title, null, locale);
+					childJson.put(Menu.TITLE, title);
+				}
 			}
 		}
 

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>[[${PROXY_CONFIG_TITLE}]]</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.6.3/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+    <style>
+        .layui-form-item .layui-input-company {
+            width: auto;
+            padding-right: 10px;
+            line-height: 38px;
+        }
+        .common-tip {
+            color: red;
+            font-size: 13px;
+        }
+        .readonly-background {
+            background:#F2F2F2
+        }
+    </style>
+</head>
+
+<body>
+<div class="layuimini-container" style="background-color: #F2F2F2;">
+    <div class="layuimini-main">
+        <div class="layui-row layui-col-space10">
+            <div class="layui-col-md6 layui-col-md-offset3">
+                <div class="layui-card">
+                    <div class="layui-card-header">[[${PROXY_CONFIG_TITLE}]]</div>
+                    <div class="layui-card-body">
+                        <div class="layui-form layuimini-form" lay-filter="tmdbForm">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">[[#{PAGE.TMDB_SEARCH_SITE}]]</label>
+                                <div class="layui-input-inline" style="width: 60%;">
+                                    <input type="text" name="tmdbTYPE" value="TMDB" class="layui-input readonly-background"
+                                           readonly=true>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label required">[[#{PAGE.TMDB_APIKEY}]]</label>
+                                <div class="layui-input-inline" style="width: 60%;">
+                                    <input type="text" name="tmdbAPIKEY" lay-verify="required"
+                                           th:lay-reqtext="#{PAGE.TMDB_CAN_NOT_BE_NULL}"
+                                           th:placeholder="#{PAGE.PLEASE_INPUT_APIKEY}" value="" class="layui-input">
+                                </div>
+                            </div>
+
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">[[#{PAGE.TMDB_SERVICE_STATE}]]</label>
+                                <input type="checkbox" name="tmdbSTATUS" lay-skin="switch" lay-text="ON|OFF" value="true">
+                            </div>
+
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">[[#{PAGE.TMDB_SEARCH_TPYE}]]</label>
+                                <input type="checkbox" name="tmdbCHINESE" lay-skin="switch" lay-text="ON|OFF" value="true">
+                            </div>
+
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">[[#{PAGE.TMDB_Proxy_IP}]]</label>
+                                <div class="layui-input-inline" style="width: 60%;">
+                                    <input type="text" name="tmdbPROXYIP"
+                                           th:placeholder="#{PAGE.TMDB_INPUT_PROXY_IP}" value="" class="layui-input">
+                                </div>
+                            </div>
+
+
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">[[#{PAGE.TMDB_Proxy_PORT}]]</label>
+                                <div class="layui-input-inline" style="width: 60%;">
+                                    <input type="text" name="tmdbPROXYPORT"
+                                           th:placeholder="#{PAGE.TMDB_INPUT_PROXY_PORT}" value="" class="layui-input">
+                                </div>
+                            </div>
+
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">[[#{PAGE.TMDB_INPUT_PROXY_STATE}]]</label>
+                                <input type="checkbox" name="tmdbPROXYSTATUS" lay-skin="switch" lay-text="ON|OFF" value="true">
+                            </div>
+
+                            <div class="layui-form-item" style="margin-left: 23%; margin-top: 5%;">
+                                <div class="layui-input-block">
+                                    <button class="layui-btn layui-btn-normal" lay-submit
+                                            lay-filter="setting">[[#{PAGE.SAVE_CONFIRM}]]</button>
+                                </div>
+                            </div>
+                        </div>
+                        <fieldset class="layui-elem-field"> <legend>说明</legend>
+                            <div class="layui-field-box">
+                                <b>服务状态：</b>总开关，需开启，开启后，会将搜索结果以TMDB上的名称进行排版替换，然后再进行规则细换。<br/>
+                                <b>中文搜索：</b>开启时，将Sonarr搜索剧集和动漫时使用中文名称进行替换，将搜索更多以中文名称命名的种子（对动漫效果更好，电影就没必要了）。<br/>
+                                <b><span style="color: #FF0000; ">↑两项均需要确保TMDB的连通性！↑</span></b><br/>
+                                <b>代理设置：</b><button id="testproxy" class="layui-btn layui-btn-sm layui-btn-radius layui-btn-danger">测试连通性</button>，如果不报错可不需要配置代理，否则需要开启代理（HTTP）或其他方法如：修改HOST。
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
+<script src="../js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+
+<script>
+    var tmdbType = '[[${PROXY_CONFIG_TITLE}]]';
+
+    layui.use(['form', 'layer', 'requestUtil'], function () {
+        var form = layui.form,
+            $ = layui.$,
+            layer = layui.layer,
+            requestUtil = layui.requestUtil;
+
+        requestUtil.get("/tmdbConfig/query", "tmdbTYPE=" + tmdbType, (res) => {
+            form.val('tmdbForm', res.data);
+        });
+
+        $('#testproxy').click(function(){
+            let loadingIndex = layer.load(2, { time: 10 * 1000 });
+            requestUtil.get("/tmdbConfig/testproxy", null , (proxyresult) => {
+                layer.close(loadingIndex);
+                layer.msg(proxyresult.msg);
+            });
+        });
+
+        form.on('submit(setting)', function (data) {
+            requestUtil.postForm("/tmdbConfig/modify", data.field, (data) => {
+                layer.msg(data.msg);
+            });
+            return false;
+        });
+
+    });
+</script>
+</body>
+
+</html>

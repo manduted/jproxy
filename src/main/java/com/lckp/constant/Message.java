@@ -63,4 +63,8 @@ public class Message {
 	public static final String TIPS_REACHABLE = "API.TIPS.REACHABLE";
 	// 不可达
 	public static final String TIPS_UNREACHABLE = "API.TIPS.UNREACHABLE";
+
+	public static final String PROXY_FAIL = "TMDB.PROXY.FAIL";
+
+	public static final String PROXY_SUCCESS = "TMDB.PROXY.SUCCESS";
 }

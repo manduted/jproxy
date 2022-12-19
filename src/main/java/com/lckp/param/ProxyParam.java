@@ -208,7 +208,14 @@ public class ProxyParam {
 					}
 				}
 			}
-			
+
+			//电视剧、动漫搜索扩容100个限制
+			String limit = paramStringBuffer.toString();
+			if (limit.contains("t=tvsearch")){
+				limit = limit.replaceAll("limit=100","limit=1000");
+				paramStringBuffer = new StringBuffer(limit);
+			}
+
 			paramStringBuffer.append("&" + Field.SEARCH_KEY + "=" + sk);
 		}
 
