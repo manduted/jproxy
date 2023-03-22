@@ -1,239 +1,54 @@
-2022-12-19 00:00:00.707 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.5.0.sql
-2022-12-19 00:00:00.714 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.6.0.sql
-2022-12-19 00:00:00.752 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT MD5SUM FROM DATABASECHANGELOG WHERE MD5SUM IS NOT NULL
-2022-12-19 00:00:00.752 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOG
-2022-12-19 00:00:00.753 [restartedMain] INFO  l.changelog.StandardChangeLogHistoryService - Reading from DATABASECHANGELOG
-2022-12-19 00:00:00.753 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT * FROM DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2022-12-19 00:00:00.783 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully released change log lock
-2022-12-19 00:00:00.818 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
-2022-12-19 00:00:00.909 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8117"]
-2022-12-19 00:00:00.930 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8117 (http) with context path ''
-2022-12-19 00:00:01.581 [restartedMain] INFO  com.lckp.Application - Started Application in 7.299 seconds (JVM running for 8.919)
-2022-12-19 00:00:03.629 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - 加载代理配置成功
-2022-12-19 00:00:03.677 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - Jackett: {"createTime":"2022-08-25 13:57:09","proxyId":1,"proxyIp":"192.168.50.200","proxyPath":"/jackett/**","proxyPort":"9117","proxyType":"Jackett","updateTime":"2022-12-14 07:33:13","validstatus":1}
-2022-12-19 00:00:03.677 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - Prowlarr: {"createTime":"2022-08-25 13:57:09","proxyId":2,"proxyIp":"127.0.0.1","proxyPath":"/prowlarr/**","proxyPort":"9696","proxyType":"Prowlarr","updateTime":"2022-08-25 13:57:09","validstatus":1}
-2022-12-19 00:00:03.677 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - qBittorrent: {"createTime":"2022-08-25 13:57:09","proxyId":3,"proxyIp":"192.168.50.200","proxyPath":"/qbittorrent/**","proxyPort":"8999","proxyType":"qBittorrent","updateTime":"2022-12-14 11:36:07","validstatus":1}
-2022-12-19 00:00:03.682 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - TMDBConfig: {"tmdbAPIKEY":"7e2ecc31e826e5d27bda2b9771444a14","tmdbPROXYIP":"192.168.50.200","tmdbPROXYPORT":"7890","tmdbPROXYSTATUS":"true","tmdbSTATUS":"true","tmdbTYPE":"TMDB"}
-2022-12-19 00:00:03.687 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：0，结果：0
-2022-12-19 00:00:19.853 [http-nio-8117-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-19 00:00:19.853 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2022-12-19 00:00:19.864 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
-2022-12-19 00:00:19.893 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 00:00:19.893 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 00:00:19.893 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=100&extended=1
-2022-12-19 00:00:21.785 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 00:00:21.785 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 00:00:21.785 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=100&extended=1
-2022-12-19 00:00:45.535 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
-2022-12-19 00:00:45.536 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 00:00:45.536 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=movie&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1
-2022-12-19 00:00:47.531 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
-2022-12-19 00:00:47.531 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 00:00:47.531 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=movie&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1
-2022-12-19 00:01:08.322 [http-nio-8117-exec-5] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 00:01:08.323 [http-nio-8117-exec-5] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 00:01:08.994 [http-nio-8117-exec-5] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 00:01:08.996 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 00:01:08.996 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - searchKey: Sono Bisque Doll wa Koi wo Suru
-2022-12-19 00:01:08.996 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=Sono Bisque Doll wa Koi wo Suru
-2022-12-19 00:01:13.900 [http-nio-8117-exec-6] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 00:01:13.900 [http-nio-8117-exec-6] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 00:01:14.327 [http-nio-8117-exec-6] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 00:01:14.327 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 00:01:14.327 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - searchKey: Sono Bisque Doll wa Koi o Suru
-2022-12-19 00:01:14.327 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=Sono Bisque Doll wa Koi o Suru
-2022-12-19 00:01:16.238 [http-nio-8117-exec-7] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 00:01:16.238 [http-nio-8117-exec-7] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 00:01:16.578 [http-nio-8117-exec-7] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 00:01:16.579 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 00:01:16.579 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - searchKey: My Dress Up Darling
-2022-12-19 00:01:16.579 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=My Dress Up Darling
-2022-12-19 00:01:28.477 [http-nio-8117-exec-8] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 00:01:28.478 [http-nio-8117-exec-8] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 00:01:28.872 [http-nio-8117-exec-8] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 00:01:28.872 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 00:01:28.872 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - searchKey: Engage Kiss
-2022-12-19 00:01:28.872 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=Engage Kiss
-2022-12-19 00:01:44.131 [http-nio-8117-exec-9] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
-2022-12-19 00:01:44.131 [http-nio-8117-exec-9] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 00:01:44.131 [http-nio-8117-exec-9] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=movie&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1
-2022-12-19 00:01:52.004 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
-2022-12-19 00:01:52.004 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 00:01:52.004 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=movie&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1
-2022-12-19 00:01:57.808 [http-nio-8117-exec-1] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 00:01:57.808 [http-nio-8117-exec-1] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 00:01:58.232 [http-nio-8117-exec-1] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 00:01:58.233 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
-2022-12-19 00:01:58.233 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - searchKey: New Police Story 2004
-2022-12-19 00:01:58.233 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=search&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1&q=New Police Story 2004
-2022-12-19 00:02:00.936 [http-nio-8117-exec-2] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 00:02:00.936 [http-nio-8117-exec-2] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 00:02:01.238 [http-nio-8117-exec-2] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 00:02:01.238 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
-2022-12-19 00:02:01.238 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - searchKey: 新警察故事 2004
-2022-12-19 00:02:01.238 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=search&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1&q=新警察故事 2004
-2022-12-19 00:03:33.803 [http-nio-8117-exec-3] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 00:03:33.803 [http-nio-8117-exec-3] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 00:03:33.956 [http-nio-8117-exec-3] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 00:03:33.957 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 00:03:33.957 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - searchKey: Sono Bisque Doll wa Koi wo Suru
-2022-12-19 00:03:33.957 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=Sono Bisque Doll wa Koi wo Suru
-2022-12-19 00:03:35.803 [http-nio-8117-exec-4] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 00:03:35.803 [http-nio-8117-exec-4] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 00:03:35.896 [http-nio-8117-exec-4] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 00:03:35.896 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 00:03:35.896 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - searchKey: Sono Bisque Doll wa Koi o Suru
-2022-12-19 00:03:35.896 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=Sono Bisque Doll wa Koi o Suru
-2022-12-19 00:03:37.803 [http-nio-8117-exec-5] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 00:03:37.803 [http-nio-8117-exec-5] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 00:03:37.850 [http-nio-8117-exec-5] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 00:03:37.850 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 00:03:37.850 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - searchKey: My Dress Up Darling
-2022-12-19 00:03:37.850 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=My Dress Up Darling
-2022-12-19 00:04:14.741 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 00:04:14.741 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 00:04:14.741 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=100&extended=1
-2022-12-19 00:06:16.352 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
-2022-12-19 00:06:16.352 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 00:06:16.352 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=movie&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1
-2022-12-19 00:36:25.201 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
-2022-12-19 00:36:25.201 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 00:36:25.201 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=movie&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1
-2022-12-19 00:36:27.200 [http-nio-8117-exec-9] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
-2022-12-19 00:36:27.200 [http-nio-8117-exec-9] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 00:36:27.200 [http-nio-8117-exec-9] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=movie&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1
-2022-12-19 01:00:00.014 [scheduling-1] INFO  com.lckp.task.SyncTask - 开始同步规则市场变化
-2022-12-19 01:00:00.023 [scheduling-1] INFO  com.lckp.task.SyncTask - 查无待同步规则
-2022-12-19 01:04:21.672 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 01:04:21.672 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 01:04:21.672 [http-nio-8117-exec-10] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=100&extended=1
-2022-12-19 01:07:23.617 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/bitsearch/results/torznab/api
-2022-12-19 01:07:23.617 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 01:07:23.617 [http-nio-8117-exec-1] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=movie&apikey=******&offset=0&cat=2000,8000,8010,5000&limit=100&extended=1
-2022-12-19 01:08:54.732 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 01:08:54.732 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - searchKey: null
-2022-12-19 01:08:54.732 [http-nio-8117-exec-2] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=100&extended=1
-2022-12-19 01:28:47.734 [http-nio-8117-exec-3] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 01:28:47.734 [http-nio-8117-exec-3] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 01:28:48.154 [http-nio-8117-exec-3] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 01:28:48.155 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 01:28:48.155 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - searchKey: Sono Bisque Doll wa Koi wo Suru
-2022-12-19 01:28:48.155 [http-nio-8117-exec-3] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=Sono Bisque Doll wa Koi wo Suru
-2022-12-19 01:28:50.160 [http-nio-8117-exec-4] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 01:28:50.160 [http-nio-8117-exec-4] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 01:28:50.472 [http-nio-8117-exec-4] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 01:28:50.473 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 01:28:50.473 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - searchKey: Sono Bisque Doll wa Koi o Suru
-2022-12-19 01:28:50.473 [http-nio-8117-exec-4] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=Sono Bisque Doll wa Koi o Suru
-2022-12-19 01:28:52.164 [http-nio-8117-exec-5] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 01:28:52.164 [http-nio-8117-exec-5] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 01:28:52.479 [http-nio-8117-exec-5] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 01:28:52.479 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 01:28:52.479 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - searchKey: My Dress Up Darling
-2022-12-19 01:28:52.479 [http-nio-8117-exec-5] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=My Dress Up Darling
-2022-12-19 01:31:17.624 [http-nio-8117-exec-6] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 01:31:17.624 [http-nio-8117-exec-6] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 01:31:17.787 [http-nio-8117-exec-6] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 01:31:17.787 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 01:31:17.787 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - searchKey: Sono Bisque Doll wa Koi wo Suru
-2022-12-19 01:31:17.787 [http-nio-8117-exec-6] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=Sono Bisque Doll wa Koi wo Suru
-2022-12-19 01:31:19.624 [http-nio-8117-exec-7] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 01:31:19.624 [http-nio-8117-exec-7] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 01:31:19.674 [http-nio-8117-exec-7] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 01:31:19.674 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 01:31:19.674 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - searchKey: Sono Bisque Doll wa Koi o Suru
-2022-12-19 01:31:19.674 [http-nio-8117-exec-7] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=Sono Bisque Doll wa Koi o Suru
-2022-12-19 01:31:21.623 [http-nio-8117-exec-8] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接TMDB
-2022-12-19 01:31:21.623 [http-nio-8117-exec-8] INFO  com.lckp.util.TmdbUtil - 连接类型：代理TMDB
-2022-12-19 01:31:21.672 [http-nio-8117-exec-8] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
-2022-12-19 01:31:21.673 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - url: http://192.168.50.200:9117/api/v2.0/indexers/mikan/results/torznab/api
-2022-12-19 01:31:21.673 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - searchKey: My Dress Up Darling
-2022-12-19 01:31:21.673 [http-nio-8117-exec-8] INFO  com.lckp.proxy.IndexerProxy - paramString: ?t=tvsearch&apikey=******&offset=0&cat=5000,5070,100001&limit=1000&extended=1&q=My Dress Up Darling
-2022-12-19 01:47:15.475 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
-2022-12-19 01:47:15.477 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2022-12-19 01:47:15.480 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2022-12-19 01:47:15.714 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2022-12-19 02:55:12.647 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
-2022-12-19 02:55:12.706 [restartedMain] INFO  com.lckp.Application - Starting Application on Li-PC with PID 13440 (G:\Github\jproxy\target\classes started by mandu in G:\Github\jproxy)
-2022-12-19 02:55:12.708 [restartedMain] INFO  com.lckp.Application - The following profiles are active: dev
-2022-12-19 02:55:12.778 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-19 02:55:12.778 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-19 02:55:14.823 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8117 (http)
-2022-12-19 02:55:14.848 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8117"]
-2022-12-19 02:55:14.849 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-12-19 02:55:14.849 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-12-19 02:55:14.971 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-12-19 02:55:14.971 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2193 ms
-2022-12-19 02:55:14.981 [restartedMain] INFO  c.lckp.config.QBittorrentProxyServletConfiguration - IS DEBUG ENABLED: true
-2022-12-19 02:55:16.519 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2022-12-19 02:55:16.570 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2022-12-19 02:55:16.601 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
-2022-12-19 02:55:16.721 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2022-12-19 02:55:16.819 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2022-12-19 02:55:17.979 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
-2022-12-19 02:55:17.988 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
-2022-12-19 02:55:17.989 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT LOCKED FROM DATABASECHANGELOGLOCK WHERE ID=1
-2022-12-19 02:55:18.006 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully acquired change log lock
-2022-12-19 02:55:19.600 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.5.0.sql
-2022-12-19 02:55:19.602 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.6.0.sql
-2022-12-19 02:55:19.634 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT MD5SUM FROM DATABASECHANGELOG WHERE MD5SUM IS NOT NULL
-2022-12-19 02:55:19.634 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOG
-2022-12-19 02:55:19.634 [restartedMain] INFO  l.changelog.StandardChangeLogHistoryService - Reading from DATABASECHANGELOG
-2022-12-19 02:55:19.634 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT * FROM DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2022-12-19 02:55:19.673 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully released change log lock
-2022-12-19 02:55:19.718 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
-2022-12-19 02:55:19.851 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8117"]
-2022-12-19 02:55:19.878 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8117 (http) with context path ''
-2022-12-19 02:55:20.598 [restartedMain] INFO  com.lckp.Application - Started Application in 9.176 seconds (JVM running for 11.385)
-2022-12-19 02:55:22.006 [Thread-14] INFO  com.lckp.config.JProxyConfiguration - 加载代理配置成功
-2022-12-19 02:55:22.099 [Thread-14] INFO  com.lckp.config.JProxyConfiguration - Jackett: {"createTime":"2022-08-25 13:57:09","proxyId":1,"proxyIp":"192.168.50.200","proxyPath":"/jackett/**","proxyPort":"9117","proxyType":"Jackett","updateTime":"2022-12-14 07:33:13","validstatus":1}
-2022-12-19 02:55:22.099 [Thread-14] INFO  com.lckp.config.JProxyConfiguration - Prowlarr: {"createTime":"2022-08-25 13:57:09","proxyId":2,"proxyIp":"127.0.0.1","proxyPath":"/prowlarr/**","proxyPort":"9696","proxyType":"Prowlarr","updateTime":"2022-08-25 13:57:09","validstatus":1}
-2022-12-19 02:55:22.099 [Thread-14] INFO  com.lckp.config.JProxyConfiguration - qBittorrent: {"createTime":"2022-08-25 13:57:09","proxyId":3,"proxyIp":"192.168.50.200","proxyPath":"/qbittorrent/**","proxyPort":"8999","proxyType":"qBittorrent","updateTime":"2022-12-14 11:36:07","validstatus":1}
-2022-12-19 02:55:22.102 [Thread-14] INFO  com.lckp.config.JProxyConfiguration - TMDBConfig: {"tmdbAPIKEY":"7e2ecc31e826e5d27bda2b9771444a14","tmdbPROXYIP":"192.168.50.200","tmdbPROXYPORT":"7890","tmdbPROXYSTATUS":"true","tmdbSTATUS":"true","tmdbTYPE":"TMDB"}
-2022-12-19 02:55:22.106 [Thread-14] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：0，结果：0
-2022-12-19 02:55:27.853 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
-2022-12-19 02:55:27.855 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2022-12-19 02:55:27.859 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2022-12-19 02:55:27.871 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2022-12-19 12:20:10.118 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
-2022-12-19 12:20:10.159 [restartedMain] INFO  com.lckp.Application - Starting Application on Li-PC with PID 5928 (G:\Github\jproxy\target\classes started by mandu in G:\Github\jproxy)
-2022-12-19 12:20:10.160 [restartedMain] INFO  com.lckp.Application - The following profiles are active: dev
-2022-12-19 12:20:10.208 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-19 12:20:10.208 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-19 12:20:11.788 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8117 (http)
-2022-12-19 12:20:11.797 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8117"]
-2022-12-19 12:20:11.798 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2022-12-19 12:20:11.798 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
-2022-12-19 12:20:11.904 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2022-12-19 12:20:11.904 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1696 ms
-2022-12-19 12:20:11.909 [restartedMain] INFO  c.lckp.config.QBittorrentProxyServletConfiguration - IS DEBUG ENABLED: true
-2022-12-19 12:20:12.922 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2022-12-19 12:20:12.954 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2022-12-19 12:20:12.976 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
-2022-12-19 12:20:13.061 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2022-12-19 12:20:13.154 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2022-12-19 12:20:13.942 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
-2022-12-19 12:20:13.947 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
-2022-12-19 12:20:13.948 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT LOCKED FROM DATABASECHANGELOGLOCK WHERE ID=1
-2022-12-19 12:20:13.958 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully acquired change log lock
-2022-12-19 12:20:15.076 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.5.0.sql
-2022-12-19 12:20:15.079 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.6.0.sql
-2022-12-19 12:20:15.104 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT MD5SUM FROM DATABASECHANGELOG WHERE MD5SUM IS NOT NULL
-2022-12-19 12:20:15.105 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOG
-2022-12-19 12:20:15.106 [restartedMain] INFO  l.changelog.StandardChangeLogHistoryService - Reading from DATABASECHANGELOG
-2022-12-19 12:20:15.106 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT * FROM DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2022-12-19 12:20:15.114 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully released change log lock
-2022-12-19 12:20:15.132 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
-2022-12-19 12:20:15.219 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8117"]
-2022-12-19 12:20:15.237 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8117 (http) with context path ''
-2022-12-19 12:20:15.747 [restartedMain] INFO  com.lckp.Application - Started Application in 6.313 seconds (JVM running for 7.487)
-2022-12-19 12:20:18.571 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - 加载代理配置成功
-2022-12-19 12:20:18.601 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - Jackett: {"createTime":"2022-08-25 13:57:09","proxyId":1,"proxyIp":"192.168.50.200","proxyPath":"/jackett/**","proxyPort":"9117","proxyType":"Jackett","updateTime":"2022-12-14 07:33:13","validstatus":1}
-2022-12-19 12:20:18.602 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - Prowlarr: {"createTime":"2022-08-25 13:57:09","proxyId":2,"proxyIp":"127.0.0.1","proxyPath":"/prowlarr/**","proxyPort":"9696","proxyType":"Prowlarr","updateTime":"2022-08-25 13:57:09","validstatus":1}
-2022-12-19 12:20:18.602 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - qBittorrent: {"createTime":"2022-08-25 13:57:09","proxyId":3,"proxyIp":"192.168.50.200","proxyPath":"/qbittorrent/**","proxyPort":"8999","proxyType":"qBittorrent","updateTime":"2022-12-14 11:36:07","validstatus":1}
-2022-12-19 12:20:18.605 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - TMDBConfig: {"tmdbAPIKEY":"7e2ecc31e826e5d27bda2b9771444a14","tmdbPROXYIP":"192.168.50.200","tmdbPROXYPORT":"7890","tmdbPROXYSTATUS":"true","tmdbSTATUS":"true","tmdbTYPE":"TMDB"}
-2022-12-19 12:20:18.609 [Thread-9] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：0，结果：0
-2022-12-19 12:20:25.850 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
-2022-12-19 12:20:25.850 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2022-12-19 12:20:25.853 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2022-12-19 12:20:25.856 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-03-22 20:59:32.405 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.5.Final
+2023-03-22 20:59:32.450 [restartedMain] INFO  com.lckp.Application - Starting Application on Li-PC with PID 10748 (G:\Github\jproxy\target\classes started by mandu in G:\Github\jproxy)
+2023-03-22 20:59:32.455 [restartedMain] INFO  com.lckp.Application - The following profiles are active: dev
+2023-03-22 20:59:32.554 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-22 20:59:32.554 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-22 20:59:34.285 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8117 (http)
+2023-03-22 20:59:34.294 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8117"]
+2023-03-22 20:59:34.295 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 20:59:34.295 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+2023-03-22 20:59:34.409 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 20:59:34.409 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1852 ms
+2023-03-22 20:59:34.419 [restartedMain] INFO  c.lckp.config.QBittorrentProxyServletConfiguration - IS DEBUG ENABLED: true
+2023-03-22 20:59:35.712 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-22 20:59:35.748 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-03-22 20:59:35.772 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-03-22 20:59:35.876 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 20:59:35.959 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 20:59:36.906 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2023-03-22 20:59:36.912 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOGLOCK
+2023-03-22 20:59:36.913 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT LOCKED FROM DATABASECHANGELOGLOCK WHERE ID=1
+2023-03-22 20:59:36.939 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully acquired change log lock
+2023-03-22 20:59:38.172 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.5.0.sql
+2023-03-22 20:59:38.176 [restartedMain] INFO  liquibase.changelog.DatabaseChangeLog - Reading resource: db/changelog/v2.6.0.sql
+2023-03-22 20:59:38.206 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT MD5SUM FROM DATABASECHANGELOG WHERE MD5SUM IS NOT NULL
+2023-03-22 20:59:38.207 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT COUNT(*) FROM DATABASECHANGELOG
+2023-03-22 20:59:38.207 [restartedMain] INFO  l.changelog.StandardChangeLogHistoryService - Reading from DATABASECHANGELOG
+2023-03-22 20:59:38.207 [restartedMain] INFO  liquibase.executor.jvm.JdbcExecutor - SELECT * FROM DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2023-03-22 20:59:38.217 [restartedMain] INFO  liquibase.lockservice.StandardLockService - Successfully released change log lock
+2023-03-22 20:59:38.252 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2023-03-22 20:59:38.343 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8117"]
+2023-03-22 20:59:38.365 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8117 (http) with context path ''
+2023-03-22 20:59:38.971 [restartedMain] INFO  com.lckp.Application - Started Application in 7.601 seconds (JVM running for 10.046)
+2023-03-22 20:59:41.312 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - 加载代理配置成功
+2023-03-22 20:59:41.350 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - Jackett: {"createTime":"2022-08-25 13:57:09","proxyId":1,"proxyIp":"192.168.50.200","proxyPath":"/jackett/**","proxyPort":"9117","proxyType":"Jackett","updateTime":"2022-12-19 06:43:20","validstatus":1}
+2023-03-22 20:59:41.350 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - Prowlarr: {"createTime":"2022-08-25 13:57:09","proxyId":2,"proxyIp":"127.0.0.1","proxyPath":"/prowlarr/**","proxyPort":"9696","proxyType":"Prowlarr","updateTime":"2022-08-25 13:57:09","validstatus":1}
+2023-03-22 20:59:41.351 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - qBittorrent: {"createTime":"2022-08-25 13:57:09","proxyId":3,"proxyIp":"192.168.50.200","proxyPath":"/qbittorrent/**","proxyPort":"8999","proxyType":"qBittorrent","updateTime":"2022-12-19 06:43:32","validstatus":1}
+2023-03-22 20:59:41.355 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - TMDBConfig: {"tmdbAPIKEY":"7e2ecc31e826e5d27bda2b9771444a14","tmdbCHINESE":"true","tmdbPROXYIP":"192.168.50.200","tmdbPROXYPORT":"7890","tmdbPROXYSTATUS":"true","tmdbSTATUS":"true","tmdbTYPE":"TMDB"}
+2023-03-22 20:59:41.359 [Thread-12] INFO  com.lckp.config.JProxyConfiguration - 加载规则成功，搜索：0，结果：0
+2023-03-22 21:00:00.110 [scheduling-1] INFO  com.lckp.task.SyncTask - 开始同步规则市场变化
+2023-03-22 21:00:00.113 [scheduling-1] INFO  com.lckp.task.SyncTask - 查无待同步规则
+2023-03-22 21:00:06.201 [http-nio-8117-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-22 21:00:06.201 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-22 21:00:06.206 [http-nio-8117-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2023-03-22 21:00:12.925 [http-nio-8117-exec-10] INFO  com.lckp.controller.PageController - noticeLocation: classpath:json/notice.json
+2023-03-22 21:00:47.317 [http-nio-8117-exec-5] INFO  com.lckp.controller.PageController - noticeLocation: classpath:json/notice.json
+2023-03-22 21:00:49.220 [http-nio-8117-exec-3] INFO  com.lckp.controller.tmdbConfigController - TMDB - 查询：{"tmdbTYPE":"TMDB"}
+2023-03-22 21:01:08.526 [http-nio-8117-exec-1] INFO  com.lckp.util.TmdbUtil - 请求连接：开始连接测试
+2023-03-22 21:01:08.532 [http-nio-8117-exec-1] INFO  com.lckp.util.TmdbUtil - 连接类型：代理测试
+2023-03-22 21:01:08.537 [http-nio-8117-exec-1] INFO  com.lckp.util.TmdbUtil - 连接关闭：关闭HTTP连接
+2023-03-22 21:18:05.360 [http-nio-8117-exec-5] INFO  com.lckp.controller.tmdbConfigController - TMDB配置 - 修改：{"tmdbAPIKEY":"7e2ecc31e826e5d27bda2b9771444a14","tmdbCHINESE":"true","tmdbPROXYIP":"192.168.50.200","tmdbPROXYPORT":"7890","tmdbPROXYSTATUS":"true","tmdbSTATUS":"true","tmdbTYPE":"TMDB"}
+2023-03-22 21:40:50.890 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2023-03-22 21:40:50.892 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-22 21:40:50.894 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-22 21:40:50.897 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

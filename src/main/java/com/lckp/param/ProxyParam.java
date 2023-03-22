@@ -4,6 +4,7 @@
  */
 package com.lckp.param;
 
+import com.lckp.util.TmdbUtil;
 import org.apache.commons.lang3.StringUtils;
 
 import com.lckp.config.JProxyConfiguration;
@@ -211,7 +212,7 @@ public class ProxyParam {
 
 			//电视剧、动漫搜索扩容100个限制
 			String limit = paramStringBuffer.toString();
-			if (limit.contains("t=tvsearch")){
+			if (limit.contains("t=tvsearch") && TmdbUtil.tmdbSTATUS()){
 				limit = limit.replaceAll("limit=100","limit=1000");
 				paramStringBuffer = new StringBuffer(limit);
 			}

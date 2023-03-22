@@ -96,7 +96,7 @@ public class FormatUtil {
 				LOGGER.debug("TMDB - 格式化前：{}", title);
 				title = tmdbFormat(titleElement.getText(), tmdb);
 				LOGGER.debug("TMDB - 格式化后：{}", title);
-				//结果筛选，不加入非必要的结果
+				//Tv结果筛选，不加入非必要的结果
 				if (tmdb.getString("type").equals("Tv") && Episode != null && IndexerProxy.searchName != null){
 					if (!title.contains(Episode)){
 						channel.remove(item);
@@ -106,6 +106,11 @@ public class FormatUtil {
 						LOGGER.debug("标题市场规则 - 格式化后：{}", title);
 						titleElement.setText(title);
 					}
+				}
+				else{
+					title = format(title, ruleList);
+					LOGGER.debug("标题市场规则 - 格式化后：{}", title);
+					titleElement.setText(title);
 				}
 			}
 			else{
@@ -226,7 +231,7 @@ public class FormatUtil {
 		String Groupname = null;
 		String GroupRule = null;
 		String RegularNumber = "${txt}";
-		String RegularText = "(?i)S\\d{2}\\s*-\\s*S\\d{2}|\\s+S\\d{2}\\s*-\\s*\\d{2}\\s+|\\[?S\\d{1,2}\\]?|\\s+S\\d{1,2}\\s+|EP?\\d{2,4}\\s*-\\s*EP?\\d{2,4}|\\[?EP?\\d{2,4}\\]?|\\s+EP?\\d{1,4}|\\[\\d{2}\\]|\\[?第\\d{1,2}[集话]\\]?";
+		String RegularText = "(?i)S\\d{2}\\s*-\\s*S\\d{2}|\\s+S\\d{1,2}\\s*-\\s*\\d{1,2}\\s+|\\[?S\\d{1,2}\\]?|\\s+S\\d{1,2}\\s+|EP?\\d{2,4}\\s*-\\s*EP?\\d{2,4}|\\[?EP?\\d{2,4}\\]?|\\s+EP?\\d{1,4}|\\[\\d{2}\\]|\\[?第\\d{1,2}[集话]\\]?";
 		String ResultName = null;
 		String ResultNumber = null;
 		String ResultText = null;
@@ -255,12 +260,12 @@ public class FormatUtil {
 			}
 			ResultName = content.replaceAll(Match, Replace);
 			ResultNumber = content.replaceAll(Match,RegularNumber);
+			LOGGER.debug("提取集数日志:{}", ResultNumber);
 
 			if (rule.getString("type").equals("Tv")){
-				Episode = animeUtil.AnimeInfo(content.replaceAll(Match, Replace+"${txt}"), rule.getString("year"));
+				Episode = animeUtil.AnimeInfo(content.replaceAll(Match, Replace+"${txt}"),content.replaceAll(Match, "${other}"),content.replaceAll(Match,"${txt}"));
 				ResultText = ResultNumber.replaceAll(RegularText,"");
 				ResultText = animeUtil.EpisodeText(ResultText);
-				LOGGER.debug("提取集数日志:{}", ResultNumber);
 				LOGGER.debug("去除集数后文本:{}", ResultText);
 
 				if (Episode.containsKey("kElementAnimeSeason") && Episode.containsKey("kElementEpisodeNumber")){
@@ -278,7 +283,7 @@ public class FormatUtil {
 					}
 				}
 				LOGGER.debug("TMDB - 最终命名规则:{}", ResultName);
-				if (!ResultName.equals(RegularText)){
+				if (!ResultName.equals(ResultText)){
 					content = ResultName + ResultText.trim();
 				}
 			}
@@ -290,7 +295,7 @@ public class FormatUtil {
 	}
 
 	public static String tmdbFormatsk(String searchkey,JSONObject data){
-		if (TmdbUtil.tmdbChineseSTATUS()){{
+		if (TmdbUtil.tmdbSTATUS() && TmdbUtil.tmdbChineseSTATUS()){{
 			if (!data.getString("title").equals("null")){
 				searchkey = data.getString("title");
 				LOGGER.debug("TMDB关键字 - 中文化后：{}", searchkey);

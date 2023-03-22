@@ -14,6 +14,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.*;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -87,6 +89,14 @@ public class TmdbUtil {
         String tmdbRegex2 = "\\d{4}$";
         String tmdbRegex3 = "(?i)s[0-9]+e*p*[0-9]+";
         String tmdbRegex4 = "(?i)(.*)(s[0-9]+.+s[0-9]+e*p*[0-9]+)";
+        List<String> tmdbRegexList = Arrays.asList(
+                "1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th",
+                "First","Second","Third","Fourth","Fifth","Sixth","Seventh","Eighth","Ninth","Tenth",
+                "第一部","第二部","第三部","第四部","第五部","第六部","第七部","第八部","第九部","第十部",
+                "第一季","第二季","第三季","第四季","第五季","第六季","第七季","第八季","第九季","第十季",
+                "Ⅰ","Ⅱ","Ⅲ","Ⅳ","Ⅴ","Ⅵ","Ⅶ","Ⅷ","Ⅸ","Ⅹ",
+                "I","II","III","IV","V","VI","VII","VIII","IX","X"
+        );
 
         if (SearchKey != null)
         {
@@ -120,6 +130,17 @@ public class TmdbUtil {
                 tmdbResult.put("name",SearchKey);
                 tmdbResult.put("year","null");
                 tmdbResult.put("type","Tv");
+            }
+            if (tmdbResult.getString("type").equals("Tv") && tmdbResult.getString("name") != null){
+                String  Name = tmdbResult.getString("name").trim();
+                String[] split = null;
+                for(String s : tmdbRegexList){
+                    if(Name.endsWith(s)){
+                        split = Name.split(s);
+                        Name = split[0].trim();
+                    }
+                }
+                tmdbResult.put("name",Name);
             }
         }
         else {
